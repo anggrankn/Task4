@@ -6,11 +6,11 @@ public class Main {
        readPythagoreanNumbers();
     }
 
-    public static void displayConclusion(int firstNumber, int secondNumber, int thirdNumber) {
+    public static void displayPythagoreanNumbersToTwenty(int firstNumber, int secondNumber, int thirdNumber) {
         System.out.printf("%d %d %d\n", firstNumber, secondNumber, thirdNumber);
     }
 
-    public static boolean checkNumberOnIntegrity(double z) {
+    public static boolean getRoundingDown(double z) {
         return Math.floor(z) == z;
     }
 
@@ -19,8 +19,8 @@ public class Main {
         for (int i = 1; i <= maxNumber; i++) {
             for (int j = 1; j <=maxNumber; j++) {
                 double z = Math.sqrt(i*i+j*j);
-                if (checkNumberOnIntegrity(z) && z <= maxNumber) {
-                    displayConclusion(i, j,(int) z);
+                if (getRoundingDown(z) && z <= maxNumber) {
+                    displayPythagoreanNumbersToTwenty(i, j,(int) z);
                 }
             }
         }
